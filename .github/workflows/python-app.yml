@@ -1,0 +1,22 @@
+name: First Push Workflow
+
+on:
+  push:
+    branches:
+      - '*'  # Trigger on push to any branch
+
+jobs:
+  first-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Print message
+        run: echo "This is the first push workflow!"
+
+      - name: Display Git info
+        run: |
+          echo "Git branch: $GITHUB_REF"
+          echo "Git commit: $GITHUB_SHA"
