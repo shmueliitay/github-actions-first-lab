@@ -13,8 +13,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Print message
-        run: app.py#echo "This is the first push workflow!"
+      - name: Set up python
+        run:  python app.py
 
       - name: Display Git info
         run: |
